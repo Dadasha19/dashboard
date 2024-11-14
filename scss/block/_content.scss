@@ -1,97 +1,120 @@
 .content_right {
-    float: right;
     padding: 0;
     width: 100%;
     margin: 0 95px 0 70px;
     text-align: left;
+    align-self: stretch;
     .hello_user {
-        float: left;
         width: 100%;
         margin: 40px 0 50px 0;
         strong {
-            float: left;
             font-size: 24px;
             font-weight: 500;
             line-height: 36px;
         }
-        .search {
-            float: right;
-            width: 216px;
-            input {
-                float: left;
-                width: 100%;
-                height: 38px;
-                padding: 10px 10px 10px 40px;
-                border-radius: 10px;
-                background: url(../img/search.png) no-repeat 8px 7px #fff;
-                box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5);
-                background-size: 24px;
-                outline: none !important;
-                line-height: 18px;
-                font-size: 12px;
-                font-weight: 400;
-                letter-spacing: -0.12px;
-                text-align: left;
-                color: #b5b7c0;
-                border: none;
-            }
-        }
     }
     .content_more {
         width: 100%;
-        float: left;
         padding: 30px 40px 40px;
         border-radius: 30px;
         margin-bottom: 40px;
         box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5);
         background-color: #fff;
-        .title {
-            float: left;
-            width:calc(100% - 250px);
-            font-size: 22px;
-            font-weight: 600;
-            letter-spacing: -0.22px;
-            text-align: left;
-            line-height: 33px;
-            span {
-                display: block;
-                float: left;
-                width: 100%;
-                margin: 7px 0 0 0;
-                line-height: 21px;
-                font-size: 14px;
-                font-weight: 400;
-                letter-spacing: -0.14px;
-                &.green {
-                    color: #16c098;
+        .title_all {
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            .title {
+                width:calc(100% - 250px);
+                font-size: 22px;
+                font-weight: 600;
+                letter-spacing: -0.22px;
+                text-align: left;
+                line-height: 33px;
+                span {
+                    display: block;
+                    width: 100%;
+                    margin: 7px 0 0 0;
+                    line-height: 21px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: -0.14px;
+                    &.green {
+                        color: #16c098;
+                    }
                 }
             }
-        }
-        .search {
-            float: right;
-            width: 216px;
-            margin-top: 14px;
-            input {
-                float: left;
-                width: 100%;
-                height: 38px;
-                padding: 10px 10px 10px 40px;
-                border-radius: 10px;
-                background: url(../img/search.png) no-repeat 8px 7px #f9fbff;
-                background-size: 24px;
-                outline: none !important;
-                line-height: 18px;
-                font-size: 12px;
-                font-weight: 400;
-                letter-spacing: -0.12px;
-                text-align: left;
-                color: #b5b7c0;
-                border: none;
+            .search {
+                float: right;
+                width: 216px;
+                margin-top: 14px;
+                input {
+                    float: left;
+                    width: 100%;
+                    height: 38px;
+                    padding: 10px 10px 10px 40px;
+                    border-radius: 10px;
+                    background: url(../img/search.png) no-repeat 8px 7px #f9fbff;
+                    background-size: 24px;
+                    outline: none !important;
+                    line-height: 18px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    letter-spacing: -0.12px;
+                    text-align: left;
+                    color: #b5b7c0;
+                    border: none;
+                    &:focus + .label-text {
+                        -moz-transform: translateY(-44px);
+                        -ms-transform: translateY(-60px);
+                        -webkit-transform: translateY(-60px);
+                        transform: translateY(-60px);
+                        margin-left: 0;
+                    }
+                      &:valid + .label-text {
+                            -moz-transform: translateY(-60px);
+                            -ms-transform: translateY(-60px);
+                            -webkit-transform: translateY(-60px);
+                            transform: translateY(-60px);
+                            margin-left: 0;
+                    }
+                }
+                .label-text {
+                    cursor: text;
+                    line-height: 18px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    margin-left: 40px;
+                    letter-spacing: -0.12px;
+                    text-align: left;
+                    color: #b5b7c0;
+                    -moz-transform: translateY(-28px);
+                    -ms-transform: translateY(-28px);
+                    -webkit-transform: translateY(-28px);
+                    transform: translateY(-28px);
+                    transition: all 0.3s;
+                }
             }
+            
+            //   label input:focus + .label-text {
+            //     color: #F0F0F0;
+            //     font-size: 13px;
+            //     -moz-transform: translateY(-74px);
+            //     -ms-transform: translateY(-74px);
+            //     -webkit-transform: translateY(-74px);
+            //     transform: translateY(-74px);
+            //   }
+            //   label input:valid + .label-text {
+            //     font-size: 13px;
+            //     -moz-transform: translateY(-74px);
+            //     -ms-transform: translateY(-74px);
+            //     -webkit-transform: translateY(-74px);
+            //     transform: translateY(-74px);
+            //   }
+
         }
         .resp-tab {
             font-weight: normal;
-            float: left;
             border: none;
             border-collapse: collapse;
             width: 100%;
@@ -107,7 +130,6 @@
                 color: #292d32;
                 border-bottom: solid 1px #eee;
                 span {
-                    // border-bottom: solid 1px #eee;
                     color: #b5b7c0; 
                     display: none;
                     font-weight: 500;     
@@ -116,17 +138,23 @@
                     left: 0; 
                     width: 100%;  
                 }
+                i {
+                    max-width: 250px;
+                    overflow: hidden;
+                    font-style: normal;
+                    text-overflow: ellipsis;
+                    display: block;
+                }
                 strong {
                     width: 80px;
-                    display: inline-block;
-                    float: right;
+                    display: flex;
                     height: 29px;
                     border-radius: 4px;
                     line-height: 29px;
                     font-size: 14px;
                     font-weight: 500;
                     letter-spacing: -0.14px;
-                    text-align: center;
+                    justify-content: center;
                     &.green {
                         border: solid 1px #00b087;
                         background-color: rgba(22, 192, 152, 0.38);
@@ -146,12 +174,12 @@
             }
         }
         .pagination_all {
-            float: right;
             margin-top: 30px;
             width: 100%;
+            flex-direction: row;
+            display: flex;
+            justify-content: space-between;
             strong {
-                display: inline-block;
-                float: left;
                 width: 243px;
                 line-height: 21px;
                 font-size: 14px;
@@ -160,11 +188,9 @@
                 color: #b5b7c0;
             }
             .pagination {
-                float: right;
                 margin: 0;
                 .page-item {
                     .page-link {
-                        display: inline-block;
                         width: 24px;
                         height: 24px;
                         line-height: 22px;
