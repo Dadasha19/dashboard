@@ -472,6 +472,7 @@ select, input {
   -webkit-transform: translateY(-28px);
   transform: translateY(-28px);
   transition: all 0.3s;
+  display: block;
 }
 .content_right .content_more .resp-tab {
   font-weight: normal;
